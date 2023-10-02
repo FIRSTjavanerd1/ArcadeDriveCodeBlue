@@ -21,14 +21,14 @@ import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
 
 
 
-//Here we declare our motors, joysticks and proggram arcade drive.
+//Here we declare our motors, joysticks and program arcade drive.
 
 public class Robot extends TimedRobot {
   private final PWMSparkMax m_leftMotor = new PWMSparkMax(1);
   private final PWMSparkMax m_rightMotor = new PWMSparkMax(4);
   private final DifferentialDrive m_robotDrive = new DifferentialDrive(m_leftMotor, m_rightMotor);
-  private final Joystick m_drive = new Joystick(0);
-  private final Joystick m_steer = new Joystick(0);
+  private final Joystick m_drive = new Joystick(getRawAxis(0);
+  private final Joystick m_steer = new Joystick(getRawAxis(1);
   private WPI_VictorSPX intake = new WPI_VictorSPX(5);
   private CANSparkMax flywheel = new CANSparkMax(6, MotorType.kBrushless);
   private WPI_VictorSPX intakeSpin = new WPI_VictorSPX(0);
